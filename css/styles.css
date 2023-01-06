@@ -1,0 +1,104 @@
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: 700;
+    color: gold;
+}
+
+main {
+    min-height: calc(100vh - 6rem);
+    background: rgb(238,174,202);
+    background: linear-gradient(20deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+main h1 {
+    font-size: 4rem;
+    color: gold;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#content {
+    padding: 2rem 0;
+}
+
+#content>section {
+    margin-top: 2rem;
+    min-height: 100vh;
+    color: white;
+}
+
+#content>section.active {
+    background-color: rgba(61, 61, 61, 0.089);
+    border-radius: 1rem;
+}
+
+#content>section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid gold;
+}
+#content>section p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+    #content>section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem;
+    }
+    #content>section h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #content>section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 7rem;
+    }
+    #content>section:nth-child(even){
+        flex-direction: row-reverse;
+        text-align: end;
+    }
+    ul.navbar-nav > li > a {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    ul.navbar-nav > li > a.active {
+        border-bottom: 2px solid gold;
+    }
+}
+
+footer p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+
+button#toTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 15px 50px 30px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
