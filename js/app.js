@@ -22,10 +22,9 @@ const data = [
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
-    const navList = document.querySelector('#navbarNav ul.navbar-nav');
+    const navList = document.querySelector('#navbarNav');
     const content = document.querySelector('#content');
-    const navbar = document.querySelector('nav.navbar');
-    const navbarHeight = navbar.offsetHeight;
+    const header = document.querySelector('header');
     const toTopBtn = document.querySelector('#toTopBtn');
 
     const fragmentNavItems = document.createDocumentFragment();
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         section.classList.add('content');
         section.setAttribute('id', item.slug);
         section.innerHTML = `
-            <div class="col-12 col-lg-9">
+            <div>
                 <h2>${item.title}</h2>
                 <p>${item.text}</p>
             </div>
@@ -69,9 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // show toTopBtn when scroll is more than the half of first section
         if (scrollPos > sections[0].offsetTop + sections[0].offsetHeight / 2) {
             toTopBtn.classList.add('active');
+            header.classList.add('fixed-top');
         }
         else {
             toTopBtn.classList.remove('active');
+            header.classList.remove('fixed-top');
         }
     });
     document.querySelectorAll('a.nav-link').forEach((link) => {

@@ -1,7 +1,62 @@
-.navbar-brand{
-    font-size: 2rem;
+@import url(responsive.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+header.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #333;
+    transition: all 0.4s ease;
+}
+
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+}
+@media screen and (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.navbar-brand {
+    display: inline-block;
+    font-size: 1.7rem;
     font-weight: 700;
     color: gold;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+nav li a {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+nav li a.active {
+    color: gold;
+    border-bottom: 2px solid gold;
 }
 
 main {
@@ -66,6 +121,9 @@ main h1 {
         align-items: center;
         padding: 0 7rem;
     }
+    #content>section>div {
+        max-width: 70%;
+    }
     #content>section:nth-child(even){
         flex-direction: row-reverse;
         text-align: end;
@@ -113,4 +171,11 @@ button#toTopBtn.active {
     visibility: visible;
     opacity: 1;
 
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
 }
