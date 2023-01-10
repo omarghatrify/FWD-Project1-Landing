@@ -1,90 +1,94 @@
+const data = [
+    {
+        slug: 'title1',
+        title: 'Title1',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad rerum in excepturi, nobis ab error assumenda quos a porro cupiditate veritatis. Quaerat quis blanditiis ducimus corporis illum minima magni accusamus totam nihil? Odio voluptates possimus error quidem rerum, earum nihil a reiciendis sit, vero nisi qui ullam. Officia nulla similique molestiae, saepe maxime magnam ipsam esse quisquam maiores distinctio quidem, vitae cumque laudantium. Voluptatibus eum quas animi, maxime non fugit deserunt? Iure, culpa vel numquam, mollitia officia fugiat adipisci animi assumenda porro distinctio rerum dignissimos sint quae odio, ipsa harum excepturi nam ipsam. Incidunt atque aperiam deleniti ullam maiores.'
+    },
+    {
+        slug: 'title2',
+        title: 'Title2',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad rerum in excepturi, nobis ab error assumenda quos a porro cupiditate veritatis. Quaerat quis blanditiis ducimus corporis illum minima magni accusamus totam nihil? Odio voluptates possimus error quidem rerum, earum nihil a reiciendis sit, vero nisi qui ullam. Officia nulla similique molestiae, saepe maxime magnam ipsam esse quisquam maiores distinctio quidem, vitae cumque laudantium. Voluptatibus eum quas animi, maxime non fugit deserunt? Iure, culpa vel numquam, mollitia officia fugiat adipisci animi assumenda porro distinctio rerum dignissimos sint quae odio, ipsa harum excepturi nam ipsam. Incidunt atque aperiam deleniti ullam maiores.'
+    },
+    {
+        slug: 'title3',
+        title: 'Title3',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad rerum in excepturi, nobis ab error assumenda quos a porro cupiditate veritatis. Quaerat quis blanditiis ducimus corporis illum minima magni accusamus totam nihil? Odio voluptates possimus error quidem rerum, earum nihil a reiciendis sit, vero nisi qui ullam. Officia nulla similique molestiae, saepe maxime magnam ipsam esse quisquam maiores distinctio quidem, vitae cumque laudantium. Voluptatibus eum quas animi, maxime non fugit deserunt? Iure, culpa vel numquam, mollitia officia fugiat adipisci animi assumenda porro distinctio rerum dignissimos sint quae odio, ipsa harum excepturi nam ipsam. Incidunt atque aperiam deleniti ullam maiores.'
+    },
+    {
+        slug: 'title4',
+        title: 'Title4',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad rerum in excepturi, nobis ab error assumenda quos a porro cupiditate veritatis. Quaerat quis blanditiis ducimus corporis illum minima magni accusamus totam nihil? Odio voluptates possimus error quidem rerum, earum nihil a reiciendis sit, vero nisi qui ullam. Officia nulla similique molestiae, saepe maxime magnam ipsam esse quisquam maiores distinctio quidem, vitae cumque laudantium. Voluptatibus eum quas animi, maxime non fugit deserunt? Iure, culpa vel numquam, mollitia officia fugiat adipisci animi assumenda porro distinctio rerum dignissimos sint quae odio, ipsa harum excepturi nam ipsam. Incidunt atque aperiam deleniti ullam maiores.'
+    }
+];
 
-$(function() {
-    // Content data, probably from API / CMS
-    const data = [
-        {
-            slug: 'title1',
-            title: 'Title1',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad rerum in excepturi, nobis ab error assumenda quos a porro cupiditate veritatis. Quaerat quis blanditiis ducimus corporis illum minima magni accusamus totam nihil? Odio voluptates possimus error quidem rerum, earum nihil a reiciendis sit, vero nisi qui ullam. Officia nulla similique molestiae, saepe maxime magnam ipsam esse quisquam maiores distinctio quidem, vitae cumque laudantium. Voluptatibus eum quas animi, maxime non fugit deserunt? Iure, culpa vel numquam, mollitia officia fugiat adipisci animi assumenda porro distinctio rerum dignissimos sint quae odio, ipsa harum excepturi nam ipsam. Incidunt atque aperiam deleniti ullam maiores.'
-        },
-        {
-            slug: 'title2',
-            title: 'Title2',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad rerum in excepturi, nobis ab error assumenda quos a porro cupiditate veritatis. Quaerat quis blanditiis ducimus corporis illum minima magni accusamus totam nihil? Odio voluptates possimus error quidem rerum, earum nihil a reiciendis sit, vero nisi qui ullam. Officia nulla similique molestiae, saepe maxime magnam ipsam esse quisquam maiores distinctio quidem, vitae cumque laudantium. Voluptatibus eum quas animi, maxime non fugit deserunt? Iure, culpa vel numquam, mollitia officia fugiat adipisci animi assumenda porro distinctio rerum dignissimos sint quae odio, ipsa harum excepturi nam ipsam. Incidunt atque aperiam deleniti ullam maiores.'
-        },
-        {
-            slug: 'title3',
-            title: 'Title3',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad rerum in excepturi, nobis ab error assumenda quos a porro cupiditate veritatis. Quaerat quis blanditiis ducimus corporis illum minima magni accusamus totam nihil? Odio voluptates possimus error quidem rerum, earum nihil a reiciendis sit, vero nisi qui ullam. Officia nulla similique molestiae, saepe maxime magnam ipsam esse quisquam maiores distinctio quidem, vitae cumque laudantium. Voluptatibus eum quas animi, maxime non fugit deserunt? Iure, culpa vel numquam, mollitia officia fugiat adipisci animi assumenda porro distinctio rerum dignissimos sint quae odio, ipsa harum excepturi nam ipsam. Incidunt atque aperiam deleniti ullam maiores.'
-        },
-        {
-            slug: 'title4',
-            title: 'Title4',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad rerum in excepturi, nobis ab error assumenda quos a porro cupiditate veritatis. Quaerat quis blanditiis ducimus corporis illum minima magni accusamus totam nihil? Odio voluptates possimus error quidem rerum, earum nihil a reiciendis sit, vero nisi qui ullam. Officia nulla similique molestiae, saepe maxime magnam ipsam esse quisquam maiores distinctio quidem, vitae cumque laudantium. Voluptatibus eum quas animi, maxime non fugit deserunt? Iure, culpa vel numquam, mollitia officia fugiat adipisci animi assumenda porro distinctio rerum dignissimos sint quae odio, ipsa harum excepturi nam ipsam. Incidunt atque aperiam deleniti ullam maiores.'
-        }
-    ];
-    
-    // DOM elements to manipulate
-    const navList = $('#navbarNav ul.navbar-nav');
-    const content = $('#content');
-    const navbar = $('nav.navbar');
-    const navbarHeight = navbar.height();
+document.addEventListener('DOMContentLoaded', function () {
+    const navList = document.querySelector('#navbarNav ul.navbar-nav');
+    const content = document.querySelector('#content');
+    const navbar = document.querySelector('nav.navbar');
+    const navbarHeight = navbar.offsetHeight;
+    const toTopBtn = document.querySelector('#toTopBtn');
 
+    const fragmentNavItems = document.createDocumentFragment();
+    const fragmentSections = document.createDocumentFragment();
     data.forEach((item, index) => {
-        // Create nav item and append to nav list
-        const navItem = $(`<li class="nav-item"><a class="nav-link" href="#${item.slug}">${item.title}</a></li>`);
-        navList.append(navItem);
+        const navItem = document.createElement('li');
+        navItem.classList.add('nav-item');
+        navItem.innerHTML = `<a class="nav-link" href="#${item.slug}">${item.title}</a>`;
+        fragmentNavItems.appendChild(navItem);
 
-        // Create content section and append to #content div
-        const section = $(`
-        <section class="content" id="${item.slug}">
+        const section = document.createElement('section');
+        section.classList.add('content');
+        section.setAttribute('id', item.slug);
+        section.innerHTML = `
             <div class="col-12 col-lg-9">
                 <h2>${item.title}</h2>
                 <p>${item.text}</p>
             </div>
-        </section>
-        `);
-        content.append(section);
+        `;
+        fragmentSections.appendChild(section);
     });
+    navList.appendChild(fragmentNavItems);
+    content.appendChild(fragmentSections);
 
-    // Smooth scroll
-    $(window).on('scroll', function() {
-        const scrollPos = $(window).scrollTop();
-        const sections = $('section.content');
-        sections.each(function() {
-            const section = $(this);
-            const sectionId = section.attr('id');
-            const sectionTop = section.offset().top;
-            const sectionHeight = section.height();
-            // Check if section is in view
+    window.addEventListener('scroll', function () {
+        const scrollPos = window.scrollY;
+        const sections = document.querySelectorAll('section.content');
+        sections.forEach((section) => {
+            const sectionId = section.getAttribute('id');
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
             if (scrollPos+200 >= sectionTop && scrollPos+200 < sectionTop + sectionHeight) {
-                // Remove active class from all nav links and add to current
-                $('a.nav-link').removeClass('active');
-                $(`a[href="#${sectionId}"]`).addClass('active');
-                // Remove active class from all sections and add to current
-                sections.removeClass('active');
-                section.addClass('active');
+                document.querySelector('a.nav-link.active')?.classList.remove('active');
+                document.querySelector(`a.nav-link[href="#${sectionId}"]`).classList.add('active');
+                section.classList.add('active');
+            }
+            else {
+                section.classList.remove('active');
             }
         });
-        // show navbar when scrolling and hide if not scrolling for 1 second
-        clearTimeout($.data(this, 'scrollTimer'));
-        navbar.slideDown({duration: 150, easing:'swing'});
-        if(scrollPos > navbarHeight){
-            $('#toTopBtn').fadeIn({duration: 500, easing:'swing'});
-            navbar.addClass('fixed-top');
-            $.data(this, 'scrollTimer', setTimeout(function() {
-                navbar.slideUp({duration: 150, easing:'swing'});
-            }, 1000));
+        // show toTopBtn when scroll is more than the half of first section
+        if (scrollPos > sections[0].offsetTop + sections[0].offsetHeight / 2) {
+            toTopBtn.classList.add('active');
         }
         else {
-            navbar.removeClass('fixed-top');
-            $('#toTopBtn').fadeOut({duration: 100, easing:'swing'});
+            toTopBtn.classList.remove('active');
         }
     });
-
-    // Scroll to top button
-    $('#toTopBtn').on('click', function() {
-        $('html, body').animate({scrollTop: 0}, {duration: 0});
+    document.querySelectorAll('a.nav-link').forEach((link) => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const sectionId = this.getAttribute('href');
+            document.querySelector(sectionId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        });
+    });
+    toTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
     });
 
 });

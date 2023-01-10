@@ -89,7 +89,8 @@ footer p {
 
 
 button#toTopBtn {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -101,4 +102,15 @@ button#toTopBtn {
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button#toTopBtn:hover {
+    background-color: rgb(255, 218, 10);
+}
+
+button#toTopBtn.active {
+    visibility: visible;
+    opacity: 1;
+
 }
